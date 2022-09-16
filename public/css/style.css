@@ -1,0 +1,277 @@
+@font-face {
+	font-family: "adumu";
+	src: url("../fonts/adumu/Adumu.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url("../img/bg-hero.png");
+	background-position: center;
+	background-size: cover;
+}
+
+.adumu {
+	font-family: 'adumu', Courier, monospace !important;
+}
+
+.ls-5 {
+	letter-spacing: 5px !important;
+}
+
+.td-none {
+	text-decoration: none !important;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	overflow: hidden;
+	background-image: url("../img/bg-hero.png");
+	background-position: center;
+	background-size: cover;
+}
+
+#preloader:before {
+	content: "";
+	position: fixed;
+	top: calc(50% - 30px);
+	left: calc(50% - 30px);
+	border: 6px solid #2b2a2a;
+	border-top-color: #FF0003;
+	border-bottom-color: #FF0003;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	-webkit-animation: animate-preloader 1s linear infinite;
+	animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animate-preloader {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/*--------------------------------------------------------------
+# hero section
+--------------------------------------------------------------*/
+#hero .btn-home {
+	background: linear-gradient(32deg, rgba(255, 149, 0, 1) 0%, rgba(255, 205, 0, 1) 80%);
+	border-radius: 10px;
+	border: none;
+	transition: 0.8s;
+	font-weight: 600;
+	box-shadow: 1px;
+	font-family: 'adumu', Courier, monospace;
+	letter-spacing: 5px;
+}
+
+#hero .btn-home:hover {
+	scale: 1.3;
+}
+
+.modal .modal-header h5 {
+	text-align: center !important;
+	font-family: "adumu";
+	letter-spacing: 8px;
+}
+
+.modal-footer button,
+.modal-footer .a-btn {
+	background: linear-gradient(32deg, rgba(255, 149, 0, 1) 0%, rgba(255, 205, 0, 1) 80%);
+	font-family: "adumu";
+	letter-spacing: 8px;
+}
+
+.card-footer {
+	background: linear-gradient(32deg, rgba(255, 149, 0, 1) 0%, rgba(255, 205, 0, 1) 80%);
+}
+
+.b-none {
+	border: none !important;
+}
+
+.bg-none {
+	background: none !important;
+}
+
+.bg-glassmorpism {
+	background: rgba(255, 255, 255, 0) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.bg-glassmorpism-2 {
+	background: rgba(255, 255, 255, 0.6) !important;
+	backdrop-filter: blur(14px) !important;
+	-webkit-backdrop-filter: blur(14px) !important;
+	border-radius: 10px !important;
+}
+
+.submit-add input {
+	border-radius: 30px;
+	transition: .3s;
+}
+
+.submit-quest {
+	border-radius: 30px;
+	border: none;
+}
+
+.card .add-area p input {
+	border-radius: 30px;
+	border: none;
+	background: rgba(255, 255, 255, 0.7);
+	height: 34px;
+}
+
+.submit-add input:hover {
+	scale: 1.1;
+}
+
+@media (min-width:1200px) and (min-height:800px) {
+	#hero img {
+		margin-bottom: 50px;
+	}
+}
+
+@media (min-width:1200px) {
+	#hero .btn-home {
+		width: 350px;
+		font-size: 20px;
+	}
+}
+
+@media (max-width:576px) {
+	#hero img {
+		width: 400px;
+		height: 300px;
+		margin-left: -10px;
+		margin-bottom: 50px;
+	}
+
+	#hero .btn-home {
+		width: 280px;
+		height: 50px;
+		padding-top: 10px;
+		font-size: 18px;
+	}
+
+	#tutorialModal .modal-body img {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+/*--------------------------------------------------------------
+# difficulties session
+--------------------------------------------------------------*/
+@media (min-width:1200px) {
+	#difficulties .card {
+		height: 400px;
+		width: 300px;
+	}
+
+	#difficulties .card h4 {
+		position: absolute;
+		right: 40%;
+		bottom: 0;
+	}
+}
+
+#difficulties .card {
+	transition: .8s;
+}
+
+#difficulties .card:hover {
+	scale: .8;
+}
+
+#hero .testimonial-carousel .owl-item .testimonial-item {
+	transform: scale(0.75);
+	transition: 0.5s;
+}
+
+#hero .testimonial-carousel .owl-item.center .testimonial-item {
+	box-shadow: none;
+	transform: scale(1.05);
+}
+
+.swals-confirmBtn {
+	font-family: 'adumu', Courier, monospace !important;
+	letter-spacing: 5px !important;
+}
+
+/*--------------------------------------------------------------
+# footer  session
+--------------------------------------------------------------*/
+#footer,
+#footer-game {
+	position: absolute;
+}
+
+@media (min-width:1200px) and (min-height:800px) {
+	#footer-game {
+		bottom: 40px !important;
+	}
+}
+
+@media (min-width:1200px) {
+	#footer {
+		bottom: 10px;
+		right: 40%;
+	}
+
+	#footer-game {
+		bottom: 10px;
+		/* right: 42%; */
+		right: 39%;
+	}
+}
+
+@media (max-width:576px) {
+	#footer {
+		bottom: 30px;
+		right: 12%;
+	}
+
+	#footer-game {
+		bottom: 30px;
+		right: 14%;
+	}
+}
